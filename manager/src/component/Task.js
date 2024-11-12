@@ -1,6 +1,7 @@
 import React from 'react';
 import './component.css';
-
+import { CiEdit } from "react-icons/ci";
+import { MdDeleteOutline } from "react-icons/md";
 const Task = ({ task, editTask, deleteTask, markTaskCompleted, changePriority }) => {
   const handleEdit = () => {
     editTask(task);
@@ -30,8 +31,8 @@ const Task = ({ task, editTask, deleteTask, markTaskCompleted, changePriority })
           <option value="Low">Low</option>
         </select>
       </p>
-      <button className="edit" onClick={handleEdit}>Edit</button>
-      <button className="delete" onClick={handleDelete}>Delete</button>
+      <button className="edit" onClick={handleEdit}><CiEdit /> Edit</button>
+      <button className="delete" onClick={handleDelete}><MdDeleteOutline /> Delete</button>
       <button className="complete" onClick={handleToggleComplete}>
         {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
       </button>
