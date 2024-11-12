@@ -1,0 +1,100 @@
+
+/* TaskForm component styling */
+
+.task-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-form input,
+  .task-form textarea,
+  .task-form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .task-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .task-form button:hover {
+    background-color: #0056b3;
+  }
+/* Dashboard component styling */
+
+.dashboard {
+    margin-top: 20px;
+  }
+  
+  .dashboard h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+/* Task component styling */
+
+.task {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .task h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .task p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .task button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task button.edit {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .task button.delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .task button.complete {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .task button:hover {
+    opacity: 0.9;
+  }
+  
+  .task select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+        
