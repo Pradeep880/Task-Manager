@@ -1,6 +1,6 @@
 # Task-Manager
 
-Developed a straightforward task management application. The emphasis is on core functionality and a user-friendly interface.
+- Developed a straightforward task management application. The emphasis is on core functionality and a user-friendly interface.
 
 
 ## Overview
@@ -31,40 +31,60 @@ The Task Manager application consists of the following features:
 
 ### Installation
 
-1. Clone the repository:
-    Open git bash
+- Clone the repository:
+
+    ```bash
     git clone https://github.com/Pradeep880/Task-Manager.git
+    ```
 
-2. Navigate to the project directory:
+- Navigate to the project directory:
+
+    ```bash
     cd manager
+    ```
 
-3. Install the dependencies:
+- Install the dependencies:
+
+    ```bash
     npm install
+    ```
 
-4. For use React-Icon
+- For use React-Icon:
+
+    ```bash
     npm install react-icons
+    ```
 
-5. Running the Application
-    (i) npm start
+- Running the Application
+    
+      ```bash
+      npm start
+      ```
+
         or
-        yarn start
-    (ii) Open your browser and go to `http://localhost:3000` to see the application running.
+
+       ```bash
+       yarn start
+       ```
+
+- Open your browser and go to `http://localhost:3000` to see the application running.
 
 ### Building for Production
 
-To create a production build of the application, run:
+- To create a production build of the application, run:
 
- git bash
+ ```bash
  npm run build
+ ```
 
 ### Assumptions
 
 During the development process, the following assumptions were made:
 
-  1. The application is a single-user application and does not require user authentication.
-  2. Tasks are persisted in the browser's local storage,making them available across page
+  - The application is a single-user application and does not require user authentication.
+  - Tasks are persisted in the browser's local storage,making them available across page
       reloads but not across different devices or browers.
-  3. Priority levels are predefined as High, Medium, and Low.       
+  - Priority levels are predefined as High, Medium, and Low.       
 
 
 
