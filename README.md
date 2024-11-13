@@ -61,11 +61,11 @@ The Task Manager application consists of the following features:
       npm start
       ```
 
-        or
+      or
 
-       ```bash
-       yarn start
-       ```
+      ```bash
+      yarn start
+      ```
 
 - Open your browser and go to `http://localhost:3000` to see the application running.
 
