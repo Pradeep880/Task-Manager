@@ -1,6 +1,6 @@
 /* Header component */
 .header {
-  background-color: #5e5f5e;
+  background-color: #323131;
   padding: 1px;
   text-align: center;
   color: white;
@@ -8,10 +8,10 @@
   width: 100%;
 }
 
-/* .header h1 {
-  
+.header h1 {
+  color: #ccd0d6;
   font-size: 2rem;
-} */
+}
 
 /* Dashboard component styling */
 
@@ -84,7 +84,10 @@
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-
+.button-complete{
+  background: #df9b44;
+  color: white;
+}
 .button-edit {
   background-color: #28a745;
   color: white;
@@ -102,7 +105,9 @@
 .button-delete:hover {
   background-color: #c82333;
 }
-
+.title{
+  display: block;
+}
 
 /* Task component styling */
 
@@ -278,7 +283,7 @@
 }
 
 .search-filter input {
-  width: 70%;
+  width: 50%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
