@@ -82,17 +82,9 @@ const Dashboard = ({ tasks, editTask, deleteTask, markTaskCompleted, changePrior
                 <IoCheckmarkDoneCircle/>{task.completed ? 'Unmark' :'Complete' }
 
                 </button>
-                {/* <button onClick={() => handleEdit(task)} className="button-edit">
-                  <CiEdit /> Edit
-                </button> */}
                 <button onClick={() => handleDelete(task)} className="button-delete">
                   <MdDeleteOutline /> Delete
                 </button>
-                <select onChange={(e) => handleChangePriority(task.id, e.target.value)} value={task.priority}>
-                  <option value="High">High</option>
-                  <option value="Medium">Medium</option>
-                  <option value="Low">Low</option>
-                </select>
               </div>
             ))
           ) : (
