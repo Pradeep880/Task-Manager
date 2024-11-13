@@ -35,14 +35,88 @@
   }
 /* Dashboard component styling */
 
-.dashboard {
-    margin-top: 20px;
-  }
-  
-  .dashboard h2 {
-    color: #007bff;
-    margin-bottom: 10px;
-  }
+.dashboard-container {
+  display: flex;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.task-section {
+  margin-bottom: 20px;
+}
+
+.task-section h2 {
+  margin-top: 0;
+}
+
+.task {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.task.high {
+  border-left: 5px solid red;
+}
+
+.task.medium {
+  border-left: 5px solid orange;
+}
+
+.task.low {
+  border-left: 5px solid green;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task button,
+.task select {
+  margin: 5px;
+}
+
+.button-edit,
+.button-delete {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-edit {
+  background-color: #28a745;
+  color: white;
+}
+
+.button-edit:hover {
+  background-color: #218838;
+}
+
+.button-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #c82333;
+}
+
+
 /* Task component styling */
 
 .task {
@@ -98,3 +172,15 @@
     border-radius: 5px;
   }
         
+/* SearchFilter component styling */
+
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+

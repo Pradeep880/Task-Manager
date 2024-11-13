@@ -1,22 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Dashboard from './component/Dashboard';
 import TaskForm from './component/TaskForm';
+import SearchFilter from './component/SearchFilter';
+import { IoMdAdd } from "react-icons/io";
+import { FaMinus } from "react-icons/fa";
 import './App.css';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
   const tasksRef = useRef(tasks);
-
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filter, setFilter] = useState({ priority: '', status: '' });
   const [taskToEdit, setTaskToEdit] = useState(null);
+  const [isTaskFormVisible, setTaskFormVisible] = useState(false);
 
-  // Load tasks from local storage on component mount
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
     setTasks(storedTasks);
     tasksRef.current = storedTasks;
   }, []);
 
-  // Save tasks to local storage whenever tasks state changes
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasksRef.current));
   }, [tasks]);
@@ -26,6 +29,7 @@ const App = () => {
     setTasks(updatedTasks);
     tasksRef.current = updatedTasks;
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    setTaskFormVisible(false);
   };
 
   const updateTask = (updatedTask) => {
@@ -44,6 +48,7 @@ const App = () => {
 
   const editTask = (task) => {
     setTaskToEdit(task);
+    setTaskFormVisible(true);
   };
 
   const markTaskCompleted = (taskId) => {
@@ -64,19 +69,36 @@ const App = () => {
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   };
 
-  
+  const filteredTasks = tasks.filter(task => {
+    const matchesPriority = filter.priority === '' || task.priority === filter.priority;
+    const matchesStatus = filter.status === '' || 
+      (filter.status === 'completed' ? task.completed : !task.completed);
+    const matchesSearchQuery = task.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      task.description.toLowerCase().includes(searchQuery.toLowerCase());
+
+    return matchesPriority && matchesStatus && matchesSearchQuery;
+  });
 
   return (
     <div className="App">
       <h1>Task Manager</h1>
-      <TaskForm 
-        addTask={addTask} 
-        updateTask={updateTask} 
-        taskToEdit={taskToEdit} 
-        setTaskToEdit={setTaskToEdit} 
-      />
+      <button 
+        onClick={() => setTaskFormVisible(!isTaskFormVisible)} 
+        className="toggle-button"
+      >
+        {isTaskFormVisible ?<FaMinus />: <IoMdAdd />}
+      </button>
+      {isTaskFormVisible && (
+        <TaskForm 
+          addTask={addTask} 
+          updateTask={updateTask} 
+          taskToEdit={taskToEdit} 
+          setTaskToEdit={setTaskToEdit} 
+        />
+      )}
+      <SearchFilter setSearchQuery={setSearchQuery} setFilter={setFilter} />
       <Dashboard 
-        tasks={tasks} 
+        tasks={filteredTasks} 
         editTask={editTask} 
         deleteTask={deleteTask} 
         markTaskCompleted={markTaskCompleted} 
