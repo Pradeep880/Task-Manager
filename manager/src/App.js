@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Dashboard from './component/Dashboard';
 import TaskForm from './component/TaskForm';
 import SearchFilter from './component/SearchFilter';
+import Header  from './component/Header';
 import { IoMdAdd } from "react-icons/io";
 import { FaMinus } from "react-icons/fa";
 import './App.css';
@@ -81,12 +82,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Task Manager</h1>
+      <Header></Header>
       <button 
         onClick={() => setTaskFormVisible(!isTaskFormVisible)} 
         className="toggle-button"
       >
-        {isTaskFormVisible ?<FaMinus />: <IoMdAdd />}
+        {isTaskFormVisible ? <FaMinus /> : <IoMdAdd />}
       </button>
       {isTaskFormVisible && (
         <TaskForm 

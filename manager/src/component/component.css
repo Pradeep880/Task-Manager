@@ -1,54 +1,41 @@
+/* Header component */
+.header {
+  background-color: #5e5f5e;
+  padding: 1px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  width: 100%;
+}
 
-/* TaskForm component styling */
+/* .header h1 {
+  
+  font-size: 2rem;
+} */
 
-.task-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .task-form input,
-  .task-form textarea,
-  .task-form select {
-    display: block;
-    width: 96%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 18px;
-  }
-  
-  .task-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .task-form button:hover {
-    background-color: #0056b3;
-  }
 /* Dashboard component styling */
 
 .dashboard-container {
   display: flex;
+  gap: 2px;
 }
 
-.sidebar {
-  flex: 0 0 250px;
+.overdue {
+  flex: 33%;
   padding: 20px;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   border-right: 1px solid #ccc;
 }
-
-.main-content {
-  flex: 1;
+.completed {
+  flex: 33%;
   padding: 20px;
+  /* background-color: #f1f1f1; */
+  border-right: 1px solid #ccc;
+}
+.main-content {
+  flex: 33%;
+  padding: 20px;
+  border-right: 1px solid #ccc;
 }
 
 .task-section {
@@ -145,23 +132,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .task button.edit {
-    background-color: #ffc107;
-    color: white;
-  }
-  
-  .task button.delete {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .task button.complete {
-    background-color: #28a745;
-    color: white;
-  }
-  
+  } 
   .task button:hover {
     opacity: 0.9;
   }
@@ -182,5 +153,142 @@
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+/* TaskForm component styling */
+.task-form {
+  background-color: #9f9e9e;
+  padding: 20px;
+  border-radius: 8px;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.task-form input,
+.task-form textarea,
+.task-form select {
+  /* display: block; */
+  width: 96%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.task-form select{
+  width: 99%;
+}
+.task-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #091155;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.task-form button:hover {
+  background-color: #624dbd;
+}
+
+/* Dashboard component styling */
+.dashboard-container {
+  display: flex;
+  margin-top: 20px;
+}
+.task-section {
+  margin-bottom: 30px;
+}
+
+.task-section h2 {
+  color: #4A90E2;
+  margin-top: 0;
+}
+
+.task {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s;
+}
+
+.task:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task.high {
+  border-left: 5px solid #E74C3C; /* Red */
+}
+
+.task.medium {
+  border-left: 5px solid #F39C12; /* Orange */
+}
+
+.task.low {
+  border-left: 5px solid #2ECC71; /* Green */
+}
+
+.task.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.button-edit,
+.button-delete {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-edit {
+  background-color: #3498DB; /* Blue */
+  color: white;
+}
+
+.button-edit:hover {
+  background-color: #2980B9;
+}
+
+.button-delete {
+  background-color: #E74C3C; /* Red */
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #C0392B;
+}
+
+/* SearchFilter component styling */
+.search-filter {
+  display: flex;
+ justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 25px;
+}
+
+.search-filter input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-filter select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+}
