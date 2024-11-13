@@ -57,25 +57,25 @@ The Task Manager application consists of the following features:
 
 - Running the Application
     
-      ```bash
-      npm start
-      ```
+    ```bash
+    npm start
+    ```
 
-      or
+    or
 
-      ```bash
-      yarn start
-      ```
+    ```bash
+    yarn start
+    ```
 
 - Open your browser and go to `http://localhost:3000` to see the application running.
 
 ### Building for Production
 
-- To create a production build of the application, run:
+ - To create a production build of the application, run:
 
- ```bash
- npm run build
- ```
+    ```bash
+    npm run build
+    ```
 
 ### Assumptions
 
@@ -85,8 +85,4 @@ During the development process, the following assumptions were made:
   - Tasks are persisted in the browser's local storage,making them available across page
       reloads but not across different devices or browers.
   - Priority levels are predefined as High, Medium, and Low.       
-
-
-
   
-

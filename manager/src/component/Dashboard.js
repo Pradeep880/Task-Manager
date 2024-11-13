@@ -82,9 +82,9 @@ const Dashboard = ({ tasks, editTask, deleteTask, markTaskCompleted, changePrior
                 <IoCheckmarkDoneCircle/>{task.completed ? 'Unmark' :'Complete' }
 
                 </button>
-                <button onClick={() => handleEdit(task)} className="button-edit">
+                {/* <button onClick={() => handleEdit(task)} className="button-edit">
                   <CiEdit /> Edit
-                </button>
+                </button> */}
                 <button onClick={() => handleDelete(task)} className="button-delete">
                   <MdDeleteOutline /> Delete
                 </button>

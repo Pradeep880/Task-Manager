@@ -87,7 +87,7 @@ const App = () => {
         onClick={() => setTaskFormVisible(!isTaskFormVisible)} 
         className="toggle-button"
       >
-        {isTaskFormVisible ? <FaMinus /> : <IoMdAdd />}
+        {isTaskFormVisible ? <FaMinus /> : <IoMdAdd />}Add new task
       </button>
       {isTaskFormVisible && (
         <TaskForm 
