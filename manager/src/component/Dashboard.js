@@ -31,7 +31,7 @@ const Dashboard = ({ tasks, editTask, deleteTask, markTaskCompleted, changePrior
     <div className="dashboard-container">
       <div className="overdue">
         <div className="task-section">
-          <h2>Overdue Tasks</h2>
+          <h2 className='task-title'>Overdue Tasks</h2>
           {overdueTasks.length > 0 ? (
             overdueTasks.map(task => (
               <div key={task.id} className={`task ${task.priority.toLowerCase()}`}>
@@ -66,7 +66,7 @@ const Dashboard = ({ tasks, editTask, deleteTask, markTaskCompleted, changePrior
         </div>
         <div className='completed'>
         <div className="task-section">
-          <h2>Completed Tasks</h2>
+          <h2 className='task-title'>Completed Tasks</h2>
           {completedTasks.length > 0 ? (
             completedTasks.map(task => (
               <div key={task.id} className={`task ${task.priority.toLowerCase()}`}>
@@ -103,7 +103,7 @@ const Dashboard = ({ tasks, editTask, deleteTask, markTaskCompleted, changePrior
       </div>
       <div className="main-content">
         <div className="task-section">
-          <h2>Upcoming Tasks</h2>
+          <h2 className='task-title'>Upcoming Tasks</h2>
           {upcomingTasks.length > 0 ? (
             upcomingTasks.map(task => (
               <div key={task.id} className={`task ${task.priority.toLowerCase()}`}>

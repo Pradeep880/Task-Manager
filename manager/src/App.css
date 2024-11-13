@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  background-color: #F4F4F4;
+  background-color: #d6d6d6;
   /* padding: 20px; */
   min-height: 100vh;
 }
@@ -12,7 +12,7 @@ h1 {
 }
 
 .toggle-button {
-  background-color: #218838;
+  background-color: #091155;
     color: white;
     border: none;
     padding: 5px 12px;
